@@ -2,7 +2,8 @@ from requests_html import HTMLSession
 from bs4 import BeautifulSoup
 
 s = HTMLSession()
-response = s.get('https://www.immobilienscout24.at/regional/wien/wien/wohnung-mieten')
+url = 'https://www.immobilienscout24.at/regional/wien/wien/wohnung-mieten'
+response = s.get(url)
 response.html.render()
 
 print(response)
