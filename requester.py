@@ -7,7 +7,6 @@ r = requests.get(url, timeout=(3.05, 27))
 
 soup = BeautifulSoup(r.content, 'html.parser')
 
-# get all links of the new appartments
 section = soup.find('section', {'class': 'rxmi5'})
 spans = section.find_all('span', recursive=False)
 
